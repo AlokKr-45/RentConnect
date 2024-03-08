@@ -11,6 +11,7 @@ import {Settings} from './components/drawer pages/setting.js';
 import {Mycart} from './components/drawer pages/mycart/mycart.js';
 import {Notification} from './components/drawer pages/notifications.js';
 import {createDrawerNavigator} from '@react-navigation/drawer';
+import { Settings_page } from "./components/settings page/settings.js";
 const Drawer = createDrawerNavigator();
 
 enableScreens();
@@ -66,7 +67,7 @@ export function Root() {
       />
       <Drawer.Screen
         name="Settings"
-        component={Settings}
+        component={Settings_page}
         options={{
           headerStyle: {
             backgroundColor: '#0000cd',

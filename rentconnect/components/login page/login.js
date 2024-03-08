@@ -8,6 +8,7 @@ import {
   TextInput,
   Alert,
 } from 'react-native';
+import { Settings_page } from "../../components/settings page/settings.js";
 
 const image = require('../../components/other/image3.jpg');
 
@@ -28,6 +29,8 @@ export const Login_page = props => {
     if (user) {
       Alert.alert('Login Successful', 'Welcome back!');
       props.navigation.navigate('Root');
+      // props.navigation.navigate('Settings', { email: email });
+
       setEmail('');
       setPassword('');
     } else {
@@ -75,8 +78,13 @@ export const Login_page = props => {
             </TouchableOpacity>
           </View>
         </View>
-      </ImageBackground>
+        <View>
+        <Settings_page email={email} /> 
     </View>
+      </ImageBackground>
+      
+    </View>
+    
   );
 };
 
